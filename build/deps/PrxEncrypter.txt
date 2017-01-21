@@ -1,0 +1,11 @@
+cd contrib/PrxEncrypter/
+make
+chmod +x PrxEncrypter
+sudo mv PrxEncrypter /opt/pspsdk/bin/
+gedit build.mak
+	Search for
+		/usr/local/pspdev/bin/PrxEncrypter
+	and replace it with
+		PrxEncrypter
+	then save the file and close it.
+sudo cp build.mak /opt/pspsdk/psp/sdk/lib/
