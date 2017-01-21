@@ -6,10 +6,10 @@ then
 	hg clone https://code.google.com/p/procfw/ procfw_bak
 fi
 cp -R procfw_bak procfw
-cp *.a procfw/Satelite
-cp *.BIN procfw/contrib/fonts
-cp *.diff procfw
-cp *.patch procfw
+cp ../../files/*.a procfw/Satelite
+cp ../../files/*.BIN procfw/contrib/fonts
+cp ../../patches/*.diff procfw
+cp ../../patches/*.patch procfw
 cd procfw
 hg patch -m "ignoreme" *.diff
 hg patch -m "ignoreme" *.patch
